@@ -9,6 +9,7 @@ namespace AkademiPlus_Transportation.Controllers
     public class ContactController : Controller
     {
         // GET: Contact
+        //Burak
         public ActionResult Index()
         {
             return View();
