@@ -1,0 +1,25 @@
+﻿@model AkademiPlus_Transportation.Models.TblProcess
+@{
+    ViewBag.Title = "UpdateProcess";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İşlem Güncelleme Ekranı</h2>
+
+<form method="post">
+    <label>İşlem ID</label>
+    @Html.TextBoxFor(x => x.ProcessID, new { @class = "form-control" })
+    <br />
+    <label>Taşıma</label>
+    @Html.TextBoxFor(x => x.Transportation, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> İşlemi Güncelle</button>
+
+
+</form>
+
+
+

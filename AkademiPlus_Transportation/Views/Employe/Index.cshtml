@@ -1,0 +1,32 @@
+﻿@model List<AkademiPlus_Transportation.Models.TblEmploye>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Personel Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Görsel</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmployeID</td>
+            <td><img src="@item.Employeİmage" /></td>
+            <td>@item.EmployeName</td>
+            <td>@item.EmployeSurname</td>
+            <td><a href="/Employe/DeleteEmploye/@item.EmployeID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Employe/UpdateEmploye/@item.EmployeID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Employe/AddEmploye/" class="btn btn-primary">Yeni Personel Kaydı</a>
+

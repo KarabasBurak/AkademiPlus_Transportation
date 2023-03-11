@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHeader") 
+
+<body>
+   
+    <!--/Banner-Start-->
+    <!-- main-slider -->
+    @Html.Action("PartialSlider")
+    <!-- //main-slider -->
+    <!--/grids-->
+    @Html.Action("PartialAbout")
+    <!--//grids-->
+    <!--/w3-grids-->
+    @Html.Action("PartialDetail")
+    <!--//w3-grids-->
+    <!--/video-->
+    @Html.Action("PartialMap")
+    <!--//video-->
+    <!-- features section -->
+    @Html.Action("PartialService")
+    <!--//features section -->
+    <!--/w3l-grids-->
+    @Html.Action("PartialType")
+    <!--//w3l-grids-->
+    <!--/testimonials-->
+    @Html.Action("PartialCommand")
+    <!--//testimonials-->
+    <!--/w3l-newsletter-->
+    <section class="w3l-newsletter py-5">
+        <div class="container py-sm-5">
+            <div class="uphny-w3l-newsletter-inf">
+                <div class="row uphny-w3l-newsletter align-items-center">
+                    <div class="col-lg-6 w3l-newsletter-left text-left">
+                        <h3 class="titlehny">Gelecekteki güncellemelerimizi kaçırmayın! Şimdi abone olun!</h3>
+                    </div>
+                    <div class="col-lg-6 w3l-newsletter-form ps-lg-5 mt-lg-0 mt-md-5 mt-4">
+                        <form action="#" method="post" class="subscribe-wthree">
+                            <div class="flex-wrap subscribe-wthree-field">
+                                <input class="form-control" type="email" placeholder="Type Your Email Address" name="email" required="">
+                                <button class="btn btn-style btn-primary" type="submit">Abone Olun</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//w3l-newsletter-->
+    <!--/footer-9-->
+    @Html.Action("PartialGeneral")
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    @Html.Action("PartialScript")
+</body>
+
+</html>
+
+

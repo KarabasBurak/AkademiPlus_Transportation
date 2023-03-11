@@ -1,0 +1,22 @@
+﻿@model AkademiPlus_Transportation.Models.TblProcess
+@{
+    ViewBag.Title = "AddProcess";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni İşlem Kaydı</h2>
+
+<form method="post">
+    <label>Taşıma</label>
+    @Html.TextBoxFor(x => x.Transportation, new { @class = "form-control" })
+    <br />
+    <label>Taşıma Açıklaması</label>
+    @Html.TextAreaFor(x => x.Description, 5,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">İşlem Ekle</button>
+
+</form>
+
+
+
+

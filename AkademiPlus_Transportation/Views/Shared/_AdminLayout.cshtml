@@ -1,0 +1,131 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transport Admin Paneli</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Templates/Transpolar-Starter/assets/css/style-starter.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+        @*<span class="w3-bar-item w3-right">Logo</span>*@
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="~/Templates/Transpolar-Starter/assets/images/team2.jpg" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Hoş geldiniz, <strong>Burak</strong></span><br>
+                @*<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> </a>*@
+                <a href="/Login/Index" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Giriş Yap</a>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="w3-container">
+            
+        </div>
+        <div class="w3-bar-block">
+
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa-solid fa-house"></i>  Close Menu</a>
+            <a href="/MainPage/Index" class="w3-bar-item w3-button w3-padding"><i style="margin-right:5px;" class="fa fa-home"></i> Ana Sayfa</a>
+            <a href="/Category/Index" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-list fa-fw"></i>  Kategoriler</a>
+            <a href="/Employe/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user"></i>  Personel</a>
+            <a href="/Customer/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>   Müşteriler</a>
+            <a href="/Product/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-project-diagram fa-fw"></i>   Ürünler</a>
+            <a href="/Process/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inbox fa-fw"></i>  İşlemler</a>
+            <a href="/Settings/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog"></i>  Ayarlar</a>
+            <a href="/Statistic/Index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-chart-bar fa-fw"></i>  İstatistikler</a>
+            <a href="/MainPage/Index" class=w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out-alt fa-fw"></i>  Çıkış Yap</a>
+
+
+        </div>
+        
+    </nav>
+    
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        @*<header class="w3-container" style="padding-top:22px">
+            <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+        </header>*@
+        <br />
+        <div class="w3-row-padding w3-margin-bottom">
+            @RenderBody()
+            @*<div class="w3-quarter">
+                <div class="w3-container w3-red w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3>52</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Messages</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-blue w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3>99</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Views</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-teal w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3>23</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Shares</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3>50</h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Users</h4>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</body>
+</html>
+
+
+

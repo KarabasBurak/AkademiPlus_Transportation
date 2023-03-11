@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cfcc6b5d93df4e01b39c57ec2be9e205" Name="Diagram1">
+        <EntityTypeShape EntityType="DbTransportModel.TblCategory" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTransportModel.TblCustomer" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTransportModel.TblEmploye" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTransportModel.TblProcess" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTransportModel.TblProduct" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTransportModel.TblTransportation" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DbTransportModel.FK_TblTransportation_TblCategory1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTransportModel.FK_TblTransportation_TblCustomer1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTransportModel.FK_TblTransportation_TblEmploye1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTransportModel.FK_TblProcess_TblTransportation1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTransportModel.FK_TblTransportation_TblProduct1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbTransportModel.sysdiagrams" Width="1.5" PointX="3.375" PointY="5.75" />
+        <EntityTypeShape EntityType="DbTransportModel.TblAbout" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DbTransportModel.Tbl_Admin" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="DbTransportModel.FK_TblProduct_TblCategory" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
